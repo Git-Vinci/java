@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd
+       http://www.springframework.org/schema/mvc
+       http://www.springframework.org/schema/mvc/spring-mvc.xsd
+">
+
+     <!-- 处理器映射器-->
+     <bean class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping"/>
+     <!-- 处理器适配器-->
+     <bean class="org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter"/>
+
+     <!--视图解析器-->
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/"></property>
+        <property name="suffix" value=".jsp"></property>
+    </bean>
+
+    <context:component-scan base-package="cn.huarui.controller"  />
+
+    <bean class="org.springframework.context.support.ConversionServiceFactoryBean" id="conversionServiceFactoryBean">
+        <property name="converters">
+            <set>
+                <bean class="cn.huarui.conver.DateConver"/>
+            </set>
+        </property>
+    </bean>
+
+    <mvc:annotation-driven  conversion-service="conversionServiceFactoryBean" />
+
+    <!--  文件上传的解析器-->
+    <bean class="org.springframework.web.multipart.commons.CommonsMultipartResolver" id="multipartResolver">
+        <property name="maxUploadSize">
+            <value>5242880</value>
+        </property>
+    </bean>
+
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <mvc:mapping path="/**/"/>
+            <bean class="cn.huarui.intercepter.MyIntercepter"/>
+        </mvc:interceptor>
+    </mvc:interceptors>
+    <!--验证框架配置 -->
+<!--   <bean class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean" id="localValidatorFactoryBean">
+        <property name="providerClass" value="org.hibernate.validator.HibernateValidator"/>
+       <property name="validationMessageSource"  ref="messageSource"/>
+    </bean>
+
+    <bean class="org.springframework.context.support.ReloadableResourceBundleMessageSource" id="messageSource">
+        <property name="fileEncodings" value="utf-8"/>
+        <property name="cacheSeconds" value="120"/>
+        <property name="basename" value="classpath:validator"/>
+    </bean>-->
+
+</beans>
