@@ -1,0 +1,68 @@
+2022-03-28 10:47:14.749  INFO 4376 --- [main] c.s.s.SpringBoot189Demo02Application     : Starting SpringBoot189Demo02Application on DESKTOP-QF0SC8U with PID 4376 (E:\idea_workspace\spring-boot-189-demo02\target\classes started by steven in E:\idea_workspace\spring-boot-189-demo02)
+2022-03-28 10:47:14.751  INFO 4376 --- [main] c.s.s.SpringBoot189Demo02Application     : The following profiles are active: test
+2022-03-28 10:47:15.336  INFO 4376 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9000 (http)
+2022-03-28 10:47:15.343  INFO 4376 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-03-28 10:47:15.343  INFO 4376 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-03-28 10:47:15.404  INFO 4376 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-03-28 10:47:15.404  INFO 4376 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 623 ms
+2022-03-28 10:47:15.525  INFO 4376 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-03-28 10:47:15.634  INFO 4376 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9000 (http) with context path ''
+2022-03-28 10:47:15.641  INFO 4376 --- [main] c.s.s.SpringBoot189Demo02Application     : Started SpringBoot189Demo02Application in 1.177 seconds (JVM running for 1.861)
+2022-03-28 10:47:31.858  INFO 4376 --- [http-nio-9000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-28 10:47:31.859  INFO 4376 --- [http-nio-9000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-03-28 10:47:31.862  INFO 4376 --- [http-nio-9000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2022-03-28 10:47:31.875  INFO 4376 --- [http-nio-9000-exec-1] c.s.s.controller.TestController          : 2222
+2022-03-28 10:47:31.875 DEBUG 4376 --- [http-nio-9000-exec-1] c.s.s.controller.TestController          : 2222
+2022-03-28 10:47:31.875  WARN 4376 --- [http-nio-9000-exec-1] c.s.s.controller.TestController          : 2222
+2022-03-28 10:48:08.416  INFO 4376 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-03-28 10:48:10.703  INFO 12988 --- [main] c.s.s.SpringBoot189Demo02Application     : Starting SpringBoot189Demo02Application on DESKTOP-QF0SC8U with PID 12988 (E:\idea_workspace\spring-boot-189-demo02\target\classes started by steven in E:\idea_workspace\spring-boot-189-demo02)
+2022-03-28 10:48:10.705  INFO 12988 --- [main] c.s.s.SpringBoot189Demo02Application     : The following profiles are active: test
+2022-03-28 10:48:11.290  INFO 12988 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9000 (http)
+2022-03-28 10:48:11.296  INFO 12988 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-03-28 10:48:11.297  INFO 12988 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-03-28 10:48:11.364  INFO 12988 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-03-28 10:48:11.364  INFO 12988 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 628 ms
+2022-03-28 10:48:11.484  INFO 12988 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-03-28 10:48:11.598  INFO 12988 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9000 (http) with context path ''
+2022-03-28 10:48:11.605  INFO 12988 --- [main] c.s.s.SpringBoot189Demo02Application     : Started SpringBoot189Demo02Application in 1.173 seconds (JVM running for 1.841)
+2022-03-28 10:48:14.995  INFO 12988 --- [http-nio-9000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-28 10:48:14.995  INFO 12988 --- [http-nio-9000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-03-28 10:48:14.998  INFO 12988 --- [http-nio-9000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2022-03-28 10:48:15.012  INFO 12988 --- [http-nio-9000-exec-1] c.s.s.controller.TestController          : 2222
+2022-03-28 10:48:15.012 DEBUG 12988 --- [http-nio-9000-exec-1] c.s.s.controller.TestController          : 2222
+2022-03-28 10:48:15.012  WARN 12988 --- [http-nio-9000-exec-1] c.s.s.controller.TestController          : 2222
+2022-03-28 10:51:54.627  INFO 12988 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-03-28 10:51:56.827  INFO 12496 --- [main] c.s.s.SpringBoot189Demo02Application     : Starting SpringBoot189Demo02Application on DESKTOP-QF0SC8U with PID 12496 (E:\idea_workspace\spring-boot-189-demo02\target\classes started by steven in E:\idea_workspace\spring-boot-189-demo02)
+2022-03-28 10:51:56.829  INFO 12496 --- [main] c.s.s.SpringBoot189Demo02Application     : The following profiles are active: test
+2022-03-28 10:51:57.454  INFO 12496 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9000 (http)
+2022-03-28 10:51:57.460  INFO 12496 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-03-28 10:51:57.460  INFO 12496 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-03-28 10:51:57.523  INFO 12496 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-03-28 10:51:57.523  INFO 12496 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 654 ms
+2022-03-28 10:51:57.665  INFO 12496 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-03-28 10:51:57.772  INFO 12496 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9000 (http) with context path ''
+2022-03-28 10:51:57.779  INFO 12496 --- [main] c.s.s.SpringBoot189Demo02Application     : Started SpringBoot189Demo02Application in 1.228 seconds (JVM running for 1.878)
+2022-03-28 10:52:09.699  INFO 12496 --- [http-nio-9000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-28 10:52:09.699  INFO 12496 --- [http-nio-9000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-03-28 10:52:09.702  INFO 12496 --- [http-nio-9000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2022-03-28 10:52:09.715  INFO 12496 --- [http-nio-9000-exec-1] c.s.s.controller.TestController          : 2222
+2022-03-28 10:52:09.716 DEBUG 12496 --- [http-nio-9000-exec-1] c.s.s.controller.TestController          : 2222
+2022-03-28 10:52:09.716  WARN 12496 --- [http-nio-9000-exec-1] c.s.s.controller.TestController          : 2222
+2022-03-28 10:52:18.353  INFO 12496 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-03-28 10:53:44.119  INFO 14476 --- [main] c.s.s.SpringBoot189Demo02Application     : Starting SpringBoot189Demo02Application on DESKTOP-QF0SC8U with PID 14476 (E:\idea_workspace\spring-boot-189-demo02\target\classes started by steven in E:\idea_workspace\spring-boot-189-demo02)
+2022-03-28 10:53:44.122  INFO 14476 --- [main] c.s.s.SpringBoot189Demo02Application     : The following profiles are active: test
+2022-03-28 10:53:44.711  INFO 14476 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9000 (http)
+2022-03-28 10:53:44.718  INFO 14476 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-03-28 10:53:44.719  INFO 14476 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-03-28 10:53:44.782  INFO 14476 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-03-28 10:53:44.782  INFO 14476 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 627 ms
+2022-03-28 10:53:44.904  INFO 14476 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-03-28 10:53:45.015  INFO 14476 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9000 (http) with context path ''
+2022-03-28 10:53:45.021  INFO 14476 --- [main] c.s.s.SpringBoot189Demo02Application     : Started SpringBoot189Demo02Application in 1.169 seconds (JVM running for 1.826)
+2022-03-28 10:53:48.135  INFO 14476 --- [http-nio-9000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-28 10:53:48.136  INFO 14476 --- [http-nio-9000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-03-28 10:53:48.140  INFO 14476 --- [http-nio-9000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2022-03-28 10:53:48.152  INFO 14476 --- [http-nio-9000-exec-1] c.s.s.controller.TestController          : 2222
+2022-03-28 10:53:48.152 DEBUG 14476 --- [http-nio-9000-exec-1] c.s.s.controller.TestController          : 2222
+2022-03-28 10:53:48.152  WARN 14476 --- [http-nio-9000-exec-1] c.s.s.controller.TestController          : 2222
+2022-03-28 10:56:13.994  INFO 14476 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'

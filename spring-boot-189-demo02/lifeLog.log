@@ -1,0 +1,9 @@
+2022-03-28 10:44:46,321 INFO [main] c.s.s.SpringBoot189Demo02Application [StartupInfoLogger.java : 55] Starting SpringBoot189Demo02Application on DESKTOP-QF0SC8U with PID 4876 (E:\idea_workspace\spring-boot-189-demo02\target\classes started by steven in E:\idea_workspace\spring-boot-189-demo02)
+2022-03-28 10:44:46,324 INFO [main] c.s.s.SpringBoot189Demo02Application [SpringApplication.java : 655] The following profiles are active: test
+2022-03-28 10:44:47,240 INFO [main] c.s.s.SpringBoot189Demo02Application [StartupInfoLogger.java : 61] Started SpringBoot189Demo02Application in 1.203 seconds (JVM running for 2.01)
+2022-03-28 10:45:06,858 INFO [main] c.s.s.SpringBoot189Demo02Application [StartupInfoLogger.java : 55] Starting SpringBoot189Demo02Application on DESKTOP-QF0SC8U with PID 7148 (E:\idea_workspace\spring-boot-189-demo02\target\classes started by steven in E:\idea_workspace\spring-boot-189-demo02)
+2022-03-28 10:45:06,861 INFO [main] c.s.s.SpringBoot189Demo02Application [SpringApplication.java : 655] The following profiles are active: test
+2022-03-28 10:45:07,756 INFO [main] c.s.s.SpringBoot189Demo02Application [StartupInfoLogger.java : 61] Started SpringBoot189Demo02Application in 1.152 seconds (JVM running for 1.948)
+2022-03-28 10:45:21,611 INFO [http-nio-9000-exec-1] c.s.s.controller.TestController [TestController.java : 30] 1111111111
+2022-03-28 10:45:21,611 DEBUG [http-nio-9000-exec-1] c.s.s.controller.TestController [TestController.java : 31] 1111111111
+2022-03-28 10:45:21,611 WARN [http-nio-9000-exec-1] c.s.s.controller.TestController [TestController.java : 32] 1111111111
