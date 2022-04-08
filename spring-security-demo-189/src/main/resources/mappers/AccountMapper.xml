@@ -1,0 +1,15 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.steven.springsecuritydemo189.mapper.AccountMapper">
+
+       <resultMap id="account_mapper" type="cn.steven.springsecuritydemo189.entity.Account">
+           <id property="id" column="id"/>
+           <result property="username" column="username"/>
+           <result property="password" column="password"/>
+           <result property="state" column="state"/>
+       </resultMap>
+       <select id="queryAccountByUserName" resultMap="account_mapper">
+           select * from t_account where username = #{name}
+       </select>
+</mapper>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+      <bean class="com.haurui.config.StudentConfig"/>
+
+      <import resource="classpath:spring-teacher.xml"/>
+<!--
+
+      <bean  class="com.haurui.entity.Student" name="student" p:sid="1" p:name="苏晏紫"/>
+      <bean class="com.haurui.entity.Teacher" name="teacher"  c:tid="1" c:name="拓跋" />
+     &lt;!&ndash; <bean class="com.haurui.entity.School"  c:student-ref="student" c:teacher-ref="teacher" />&ndash;&gt;
+      <bean class="com.haurui.entity.School"  c:_1-ref="student" c:_0-ref="teacher" />
+-->
+
+<!--       <bean class="com.haurui.entity.School">
+            <property name="student" ref="student"/>
+             <property name="teacher" ref="teacher"/>
+       </bean>
+
+       <bean class="com.haurui.entity.Teacher" id="teacher">
+             &lt;!&ndash; 构造注入&ndash;&gt;
+            <constructor-arg  name="name" value="乔蚩尤"/>
+            <constructor-arg name="tid" value="6"/>
+        </bean>
+       &lt;!&ndash; 值的注入&ndash;&gt;
+        <bean class="com.haurui.entity.Student" id="student">
+              <constructor-arg index="0" value="7"/>
+              <constructor-arg index="1" value="许官人"/>
+        </bean>-->
+
+
+
+<!--      &lt;!&ndash;静态工厂注入&ndash;&gt;
+    <bean factory-method="getStudent" class="com.haurui.entity.StudentFactory"/>
+
+    &lt;!&ndash; 实例工厂注入&ndash;&gt;
+    <bean class="com.haurui.entity.TeacherFactory" id="teacherFactory" />
+    <bean factory-bean="teacherFactory" factory-method="getTeacher"/>-->
+</beans>
