@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Title</title>
+  <link rel="stylesheet" th:href="@{/webjars/bootstrap/css/bootstrap.css}"/>
+  <script src="/webjars/jquery/jquery.js"></script>
+  <script src="/webjars/bootstrap/js/bootstrap.bundle.js"></script>
+
+  <script type="text/javascript">
+    function prevAdsImage(){
+      const $div = $("#div-ads-img-prev").empty();
+      for (let file of event.target.files){
+        const reader = new FileReader();
+        reader.onload = function (){
+          $div.append(`<img src="`+reader.result+`" alt="" width="100" class="img-thumbnail mr-1"/>`);
+        }
+        reader.readAsDataURL(file);
+      }
+    }
+  </script>
+</head>
+<body>
+
+<div class="container">
+  <h3>广告管理</h3>
+  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <!--/*@thymesVar id="adsList" type="java.io.File[]"*/-->
+      <li
+              th:each="ads,status : ${adsList}"
+              data-target="#carouselExampleIndicators"
+              th:data-slide-to="${status.index}"
+              th:class="${status.index eq 0}?'active':''"></li>
+    </ol>
+    <div class="carousel-inner">
+      <!--/*@thymesVar id="adsList" type="java.io.File[]"*/-->
+      <div
+              th:each="ads,status : ${adsList}"
+              th:classappend="${status.index eq 0}?'active':''"
+              class="carousel-item">
+        <img class="d-block w-100" th:src="@{|/img/${ads.name}|}" alt="First slide">
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+
+  <hr/>
+
+  <h4>新增广告图片</h4>
+  <form action="/upload-ads" method="post" enctype="multipart/form-data">
+    <input onchange="prevAdsImage()" type="file" name="files" required multiple/>
+    <div id="div-ads-img-prev" class="my-2">
+      <span class="text-muted">请选择要上传的广告图片</span>
+    </div>
+    <button class="btn btn-success">上传</button>
+  </form>
+</div>
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+<hr/>
+
+<h1>这是thymeleaf模板页面的内容</h1>
+
+<hr/>
+
+<h2 th:text="这是在thymeleaf中输出的内容">
+  这是一个H2标签中的内容
+</h2>
+
+<h2 th:utext="这是在thymeleaf中输出的内容">
+  这是一个H2标签中的内容
+</h2>
+
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+</body>
+</html>

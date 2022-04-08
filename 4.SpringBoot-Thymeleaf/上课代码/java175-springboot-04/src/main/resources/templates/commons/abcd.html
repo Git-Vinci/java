@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh" xmlns:th="http://www.thymeleaf.org">
+
+<head th:fragment="header(title)">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title th:replace="${title}"></title>
+  <link rel="stylesheet" href="/webjars/bootstrap/4.5.0/css/bootstrap.css"/>
+  <script type="text/javascript" src="/webjars/jquery/3.5.1/jquery.js"></script>
+  <script type="text/javascript" src="/webjars/bootstrap/4.5.0/js/bootstrap.bundle.js"></script>
+  <style type="text/css">
+    caption{
+      caption-side: top !important;
+    }
+  </style>
+</head>
+
+<body>
+
+<div th:fragment="copyright2">
+  &copy; Huarui java175 2021
+</div>
+
+
+<th:block th:fragment="plus(x, y)">
+  <span th:text="${x}">操作数A</span>
+  <span>+</span>
+  <span th:text="${y}">操作数B</span>
+  <span>=</span>
+  <span th:text="${x+y}">总和</span>
+</th:block>
+
+
+<!--/*@thymesVar id="page" type="com.github.pagehelper.PageInfo"*/-->
+<ul th:fragment="pagination(path)" class="pagination pagination-sm">
+  <li class="page-item"
+      th:classappend="${page.hasPreviousPage?'':'disabled'}">
+    <a th:href="@{${path}(pageNum=${page.prePage},pageSize=${page.pageSize})}" class="page-link">上一页</a>
+  </li>
+  <li class="page-item"
+      th:each="p : ${page.navigatepageNums}"
+      th:classappend="${(p eq page.pageNum)?'active':''}">
+    <a th:href="@{${path}(pageNum=${p},pageSize=${page.pageSize})}" class="page-link" th:text="${p}">1</a>
+  </li>
+  <li class="page-item"
+      th:classappend="${page.hasNextPage?'':'disabled'}">
+    <a th:href="@{${path}(pageNum=${page.nextPage},pageSize=${page.pageSize})}" class="page-link">下一页</a>
+  </li>
+</ul>
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="commons/abcd::header(~{::title})">
+  <title>EMPS</title>
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div th:if="${#lists.isEmpty(page.list)}" class="h3 text-center text-muted">
+      没有可以显示的员工数据！！！
+    </div>
+
+    <table th:unless="${#lists.isEmpty(page.list)}" class="table table-hover table-striped table-sm">
+      <caption>
+        <h3>EMPS</h3>
+      </caption>
+      <thead class="thead-dark">
+      <tr>
+        <th>EMPNO</th>
+        <th>ENAME</th>
+        <th>JOB</th>
+        <th>MANAGER</th>
+        <th>HIREDATE</th>
+        <th>SAL</th>
+        <th>COMM</th>
+        <th>DPET</th>
+      </tr>
+      </thead>
+      <!--/*@thymesVar id="page" type="com.github.pagehelper.PageInfo<com.haurui.java175.entity.Emp>"*/-->
+      <tbody>
+      <tr th:each="emp : ${page.list}" th:object="${emp}">
+        <td th:text="*{empno}"></td>
+        <td th:text="*{ename}"></td>
+        <td th:text="*{job}"></td>
+
+        <!--<td th:text="*{#strings.isEmpty(manager)?'-':manager.ename}"></td>-->
+        <td th:text="*{(manager?.ename)?:'-'}"></td>
+
+        <td th:text="*{#dates.format(hiredate, 'yyyy-MM-dd')}"></td>
+        <td th:text="*{#numbers.formatCurrency(sal)}"></td>
+        <td th:text="*{#numbers.formatCurrency(comm)?:'-'}"></td>
+        <td th:text="*{dept.dname}"></td>
+      </tr>
+      </tbody>
+    </table>
+
+    <div th:insert="commons/abcd::pagination('/')" class="d-flex justify-content-center">
+      这里显示分页导航
+    </div>
+  </div>
+</body>
+</html>

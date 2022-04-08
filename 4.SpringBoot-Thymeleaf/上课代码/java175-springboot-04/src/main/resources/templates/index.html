@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="commons/abcd::header(~{::title})">
+  <title>Title</title>
+</head>
+
+<body>
+<h1>index</h1>
+
+<th:block>
+  <h3>这是一个th:block标签</h3>
+  <input type="text">
+  <button>按钮</button>
+</th:block>
+
+
+<!--定义片段-->
+<div th:fragment="copyright">
+  &copy; java175 2021
+</div>
+
+
+<hr/>
+
+<h3>th:insert="::copyright"</h3>
+<div th:insert="::copyright">
+  定义的片段将被添加到这个标签体中
+</div>
+
+<hr/>
+
+<h3>th:replace="::copyright"</h3>
+<div th:replace="::copyright">
+  定义的片段将用来替换该标签
+</div>
+
+<hr/>
+
+<h3>th:include="::copyright" (不推荐)</h3>
+<div th:include="::copyright"></div>
+
+<hr/>
+
+<h3>当前页面引用 commons/abcd.html 页面中的 copryright 片段</h3>
+
+<div th:replace="commons/abcd :: copyright2"></div>
+
+<hr/>
+
+<h3>调用一个带有参数的片段</h3>
+<div th:insert="commons/abcd::plus(100,200)"></div>
+
+<div th:insert="commons/abcd::plus(y=200,x=100)"></div>
+
+<div th:insert="commons/abcd::plus(100,999)"></div>
+
+<hr/>
+
+单价： <span th:text="${#numbers.formatCurrency(9999.89511)}"></span>
+
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+</body>
+<br/>
+</html>

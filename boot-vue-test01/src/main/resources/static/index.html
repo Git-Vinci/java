@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="/js/vuejs-2.5.16.js"></script>
+    <script src="/js/axios-0.18.0.js"></script>
+</head>
+<body>
+      <div id="app">
+          <table>
+              <tr>
+                  <td>id</td>
+                  <td>name</td>
+                  <td>desc</td>
+              </tr>
+              <tr v-for="(item,index) in roleList">
+                  <td>{{item.rid}}</td>
+                  <td>{{item.rname}}</td>
+                  <td>{{item.rdesc}}</td>
+              </tr>
+          </table>
+      </div>
+      <script>
+          new Vue({
+              el:"#app",
+              data:{
+                  roleList:[]
+              },
+              created:function () {
+                  this.findAll()
+              },
+              methods:{
+                  findAll:function () {
+                      var _this =this;
+                      axios.get('/role')
+                          .then(function(response){
+                              _this.roleList =response.data;
+                          })
+                          .catch(function(err){
+                              console.log(err);
+                          });
+                  }
+              }
+          })
+
+      </script>
+</body>
+</html>

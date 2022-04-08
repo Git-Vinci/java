@@ -1,0 +1,23 @@
+{
+  "groups": [
+    {
+      "name": "huarui.demo",
+      "type": "cn.steven.TeacherProperties",
+      "sourceType": "cn.steven.TeacherProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "huarui.demo.name",
+      "type": "java.lang.String",
+      "sourceType": "cn.steven.TeacherProperties"
+    },
+    {
+      "name": "huarui.demo.tid",
+      "type": "java.lang.Integer",
+      "sourceType": "cn.steven.TeacherProperties",
+      "defaultValue": 0
+    }
+  ],
+  "hints": []
+}
